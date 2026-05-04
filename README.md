@@ -18,7 +18,7 @@ The model receives a frame of interest along with surrounding **context frames**
 
 ## Model Architecture
 
-A **diamond-shaped MLP** — wide in the middle, narrowing towards both ends. This allows the network to first expand its representational capacity to capture complex patterns, then progressively compress them into a discriminative output space.
+A **inverted pyramid MLP** — wide in the beginning, narrowing towards the end. This allows the network to first expand its representational capacity to capture complex patterns, then progressively compress them into a discriminative output space.
 
 ```
 Input  →  [2240]  →  [2048]  →  [1024]  →  [512]  →  [256]  →  [128]  →  Output [40]
