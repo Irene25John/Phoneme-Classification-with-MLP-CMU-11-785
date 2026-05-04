@@ -1,4 +1,4 @@
-# 🎙️ Phoneme Classification with MLP — CMU 11-785
+# Phoneme Classification with MLP — CMU 11-785
 
 > **Academic Competition / Project** for **11-785: Introduction to Deep Learning (Spring 2026)**  
 > Carnegie Mellon University  
@@ -6,17 +6,17 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 This project tackles **frame-level phoneme state classification** from Mel spectrogram features using a feedforward Multi-Layer Perceptron (MLP). The dataset consists of Wall Street Journal (WSJ) speech recordings pre-processed into 28-dimensional MFCC frames, each labelled with one of **40 phoneme state classes** (120 subphoneme states total).
 
 The model receives a frame of interest along with surrounding **context frames** and predicts the phoneme state label for that frame.
 
-**Competition Result:** 🏆 Rank **123 / 268** · Private Score: **0.86132** · [View Leaderboard](https://www.kaggle.com/competitions/hw-1-p-2-spring-2026-student-competition/leaderboard)
+**Competition Result:** Rank **123 / 268** · Private Score: **0.86132** · [View Leaderboard](https://www.kaggle.com/competitions/hw-1-p-2-spring-2026-student-competition/leaderboard)
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 A **diamond-shaped MLP** — wide in the middle, narrowing towards both ends. This allows the network to first expand its representational capacity to capture complex patterns, then progressively compress them into a discriminative output space.
 
@@ -65,7 +65,7 @@ Input  →  [2240]  →  [2048]  →  [1024]  →  [512]  →  [256]  →  [128]
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 | Hyperparameter       | Value                                      |
 |----------------------|--------------------------------------------|
@@ -80,7 +80,6 @@ Input  →  [2240]  →  [2048]  →  [1024]  →  [512]  →  [256]  →  [128]
 | Optimizer            | AdamW                                      |
 | Loss Function        | CrossEntropyLoss (label smoothing = 0.1)   |
 | LR Scheduler         | ReduceLROnPlateau (factor=0.5, patience=2) |
-| Mixed Precision      | ✅ `torch.amp.GradScaler`                  |
 | Freq Mask Param      | 8                                          |
 | Time Mask Param      | 20                                         |
 | Batch Size           | 2048                                       |
@@ -97,7 +96,7 @@ Input  →  [2240]  →  [2048]  →  [1024]  →  [512]  →  [256]  →  [128]
 
 ---
 
-## 💡 Key Learnings
+## Key Learnings
 
 ### 1. Train on a smaller subset first
 Running early experiments on a fraction of `train-clean-100` saves significant compute time. Once the best configuration is found, retrain on the full dataset.
@@ -116,7 +115,7 @@ Randomly masking frequency bands (`freq_mask_param=8`) forces the model to not o
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 The dataset is sourced from the **LibriSpeech corpus** (Wall Street Journal read-aloud articles) and is provided via Kaggle. All audio has been pre-processed into **28-dimensional Mel-frequency cepstral coefficient (MFCC) frames** — no raw waveform processing is required.
 
@@ -158,7 +157,7 @@ Cepstral mean-variance normalisation can optionally be applied per utterance to 
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Download the dataset from the [Kaggle competition page](https://www.kaggle.com/).
 2. Open `assignment-1-irene_on_time.ipynb` in Kaggle or Google Colab (GPU recommended).
@@ -166,5 +165,3 @@ Cepstral mean-variance normalisation can optionally be applied per utterance to 
 4. Run all cells sequentially to train, evaluate, and generate predictions.
 
 ---
-
-*Submitted by: Irene John · CMU 11-785 Spring 2026*
