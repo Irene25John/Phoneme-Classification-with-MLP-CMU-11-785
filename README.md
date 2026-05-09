@@ -1,4 +1,4 @@
-# Phoneme Classification with MLP — CMU 11-785
+# Phoneme Classification with MLP — CMU 11-685
 
 > **Academic Competition / Project** for **11-785: Introduction to Deep Learning (Spring 2026)**  
 > Carnegie Mellon University  
