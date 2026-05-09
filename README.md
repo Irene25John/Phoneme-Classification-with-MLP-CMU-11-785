@@ -1,6 +1,6 @@
 # Phoneme Classification with MLP — CMU 11-685
 
-> **Academic Competition / Project** for **11-785: Introduction to Deep Learning (Spring 2026)**  
+> **Academic Competition / Project** for **11-685: Introduction to Deep Learning (Spring 2026)**  
 > Carnegie Mellon University  
 > Kaggle Competition: [Frame-Level Classification of Speech](https://www.kaggle.com/competitions/hw-1-p-2-spring-2026-student-competition/leaderboard)
 
