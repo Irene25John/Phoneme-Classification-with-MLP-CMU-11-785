@@ -156,12 +156,3 @@ Each frame is classified using a **sliding window of context frames** around it.
 Cepstral mean-variance normalisation can optionally be applied per utterance to remove channel effects from the MFCC coefficients.
 
 ---
-
-## How to Run
-
-1. Download the dataset from the [Kaggle competition page](https://www.kaggle.com/).
-2. Open `assignment-1-irene_on_time.ipynb` in Kaggle or Google Colab (GPU recommended).
-3. Set your hyperparameters in the config section.
-4. Run all cells sequentially to train, evaluate, and generate predictions.
-
----
